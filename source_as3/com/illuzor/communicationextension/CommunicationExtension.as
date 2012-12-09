@@ -4,7 +4,7 @@ package com.illuzor.communicationextension {
 	
 	/**
 	 * ...
-	 * @author illuzor  //  illuzor@gmail.com  //  illuzor.com
+	 * @author illuzor
 	 */
 	
 	public class CommunicationExtension {
