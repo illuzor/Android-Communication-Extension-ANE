@@ -9,6 +9,11 @@ Features:
 	- send sms
 	- send email
 	
+Changes history:
+
+	10.01.2013:
+	- added multiple email adresses
+	
 How to use:
 
 Connect com.illuzor.extensions.CommunicationExtension.ane file to your android air project.
@@ -32,10 +37,12 @@ Import com.illuzor.communicationextension.CommunicationExtension;
 	
 3) Email:
 
-	CommunicationExtension.sendEmail("adress@example.com", "Email subject", "Your email text");
+	CommunicationExtension.sendEmail(["adress@example.com"], "Email subject", "Your email text");
+	// or multiple adresses
+	CommunicationExtension.sendEmail(["adress@example.com", "adress102@example.ws", "adress247@example.ru"], "Email subject", "Your email text");
 	
 4) Dispose. If you don`t need extension after use, dispose it:
 
 	CommunicationExtension.dispose();
 	
-Demo app - http://clck.ru/4Jj0c
+Demo app - http://yadi.sk/d/Se_LR8fm1lgsD

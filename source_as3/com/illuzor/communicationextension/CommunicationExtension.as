@@ -25,9 +25,9 @@ package com.illuzor.communicationextension {
 			context.call("sendSMS", phoneNumber, message);
 		}
 		
-		public static function sendEmail(adress:String, subject:String, message:String):void {
+		public static function sendEmail(addresses:Array, subject:String, message:String):void {
 			if (!context) init();
-			context.call("sendEmail", adress, subject, message);
+			context.call("sendEmail", addresses.join(","), subject, message);
 		}
 		
 		public static function get phoneSupported():Boolean {
