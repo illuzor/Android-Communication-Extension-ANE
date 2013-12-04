@@ -1,1 +1,1 @@
-﻿com.illuzor.extensions.CommunicationExtension
+com.illuzor.extensions.CommunicationExtension

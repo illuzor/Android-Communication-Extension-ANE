@@ -1,0 +1,13 @@
+<extension xmlns="http://ns.adobe.com/air/extension/3.9">
+	<id>com.illuzor.extensions.CommunicationExtension</id>
+	<versionNumber>1</versionNumber>
+	<platforms>
+		<platform name="Android-ARM">
+			<applicationDeployment>
+				<nativeLibrary>commExtLib.jar</nativeLibrary>
+				<initializer>com.illuzor.communicationextension.CommunicationExtension</initializer>
+				<finalizer>com.illuzor.communicationextension.CommunicationExtension</finalizer>
+			</applicationDeployment>
+		</platform>
+	</platforms>
+</extension>
