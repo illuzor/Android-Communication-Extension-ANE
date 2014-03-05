@@ -14,6 +14,8 @@ Changes history:
 	10.01.2013:
 	- added multiple email adresses
 	
+Important! Be shure, that you are using latest version of AIR SDK. This ANE builded for 4.0
+	
 How to use:
 
 Connect com.illuzor.extensions.CommunicationExtension.ane file to your android air project.
@@ -33,7 +35,6 @@ Import com.illuzor.communicationextension.CommunicationExtension;
 2) SMS:
 
 	CommunicationExtension.sendSMS("123456789", "Your message text");
-	
 	
 3) Email:
 
