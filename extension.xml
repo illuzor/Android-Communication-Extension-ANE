@@ -1,8 +1,15 @@
-<extension xmlns="http://ns.adobe.com/air/extension/4.0">
+<extension xmlns="http://ns.adobe.com/air/extension/14.0">
 	<id>com.illuzor.extensions.CommunicationExtension</id>
 	<versionNumber>1</versionNumber>
 	<platforms>
 		<platform name="Android-ARM">
+			<applicationDeployment>
+				<nativeLibrary>commExtLib.jar</nativeLibrary>
+				<initializer>com.illuzor.communicationextension.CommunicationExtension</initializer>
+				<finalizer>com.illuzor.communicationextension.CommunicationExtension</finalizer>
+			</applicationDeployment>
+		</platform>
+		<platform name="Android-x86">
 			<applicationDeployment>
 				<nativeLibrary>commExtLib.jar</nativeLibrary>
 				<initializer>com.illuzor.communicationextension.CommunicationExtension</initializer>

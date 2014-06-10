@@ -9,12 +9,7 @@ Features:
 	- send sms
 	- send email
 	
-Changes history:
-
-	10.01.2013:
-	- added multiple email adresses
-	
-Important! Be shure, that you are using latest version of AIR SDK. This ANE builded for 4.0
+Important! Be shure, that you are using latest version of AIR SDK. This ANE builded for 14.0
 	
 How to use:
 
