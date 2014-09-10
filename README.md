@@ -4,12 +4,12 @@ Native Extension for Adobe AIR
 
 Features:
 
-	- dial phone number
-	- call phone number
-	- send sms
-	- send email
+	- dial phone number;
+	- call phone number;
+	- send sms;
+	- send email (attachments supported).
 	
-Important! Be shure, that you are using latest version of AIR SDK. This ANE builded for 14.0
+Important! Be shure you are using latest version of AIR SDK. This ANE builded for 15.0
 	
 How to use:
 
@@ -36,6 +36,10 @@ Import com.illuzor.communicationextension.CommunicationExtension;
 	CommunicationExtension.sendEmail(["adress@example.com"], "Email subject", "Your email text");
 	// or multiple adresses
 	CommunicationExtension.sendEmail(["adress@example.com", "adress102@example.ws", "adress247@example.ru"], "Email subject", "Your email text");
+	// or with attachments (one or multiple)
+	var file1:File = ...;
+	var file2:File = ...;
+	CommunicationExtension.sendEmail(["adress@example.com"], "Email subject", "Your email text", [file1, file2]);
 	
 4) Dispose. If you don`t need extension after use, dispose it:
 

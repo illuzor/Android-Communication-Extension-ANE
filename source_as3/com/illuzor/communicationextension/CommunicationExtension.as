@@ -1,6 +1,7 @@
 package com.illuzor.communicationextension {
 	
 	import flash.external.ExtensionContext;
+	import flash.filesystem.File;
 	
 	/**
 	 * ...
@@ -25,9 +26,23 @@ package com.illuzor.communicationextension {
 			context.call("sendSMS", phoneNumber, message);
 		}
 		
-		public static function sendEmail(addresses:Array, subject:String, message:String):void {
+		public static function sendEmail(addresses:Array, subject:String, message:String, files:Array = null):void {
 			if (!context) init();
-			context.call("sendEmail", addresses.join(","), subject, message);
+			var fileCheckFailed:Boolean;
+			var filesPaths:Array = [];
+			var filesPathsString:String = "";
+			if (files) {
+				for (var i:int = 0; i < files.length; i++) {
+					filesPaths.push(File(files[i]).nativePath);
+					if (!File(files[i]).exists) {
+						fileCheckFailed = true;
+						throw new Error("CommunicationExtension Error: " + File(files[i]).url + " not exists");
+						break;
+					}
+				}
+				filesPathsString = filesPaths.join(",");
+			}
+			if (!fileCheckFailed) context.call("sendEmail", addresses.join(","), subject, message, filesPathsString);
 		}
 		
 		public static function get phoneSupported():Boolean {
