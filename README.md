@@ -9,7 +9,7 @@ Features:
 	- send sms;
 	- send email (attachments supported).
 	
-Important! Be shure you are using latest version of AIR SDK. This ANE builded for 15.0.356
+Important! Be shure you are using latest version of AIR SDK. This ANE builded for 18
 	
 How to use:
 
